@@ -1,0 +1,59 @@
+# プロジェクト管理システム - 依存関係リスト
+# Version: 1.0.0
+# Last Updated: 2025-08-11
+
+# === コア依存関係（必須） ===
+
+# GUI フレームワーク（PyQt6統合アプリケーション）
+PyQt6>=6.4.0,<7.0.0
+
+# Excel連携（4フォーマット対応）
+openpyxl>=3.0.9,<4.0.0        # Excel読み込み・基本操作
+xlsxwriter>=3.0.3,<4.0.0      # Excel高品質出力・スタイル対応
+
+# === 標準ライブラリ（追加インストール不要） ===
+# json          - データ永続化（JSON形式）
+# datetime      - 日時処理
+# logging       - ログ管理
+# pathlib       - ファイルパス操作
+# uuid          - ユニークID生成
+# threading     - バックグラウンド処理
+# collections   - データ構造
+# typing        - 型ヒント
+# argparse      - コマンドライン引数解析
+# os, sys       - システム操作
+
+# === 開発・品質保証用（オプション） ===
+# 以下は開発時のみ必要（本番環境では不要）
+
+# pytest>=7.0.0              # 単体テスト
+# pytest-cov>=4.0.0          # カバレッジ測定
+# black>=22.0.0               # コードフォーマッター
+# flake8>=5.0.0               # 静的解析
+# mypy>=0.991                 # 型チェック
+# bandit>=1.7.4               # セキュリティチェック
+
+# === プラットフォーム固有（自動判定） ===
+# Windows: pywin32 (PyQt6に含まれる)
+# macOS: なし
+# Linux: 追加パッケージ不要
+
+# === Python バージョン要件 ===
+# Python 3.7以上が必要
+# 推奨: Python 3.9以上
+
+# === インストール方法 ===
+# pip install -r requirements.txt
+
+# === トラブルシューティング ===
+# PyQt6インストールエラーの場合:
+# pip install --upgrade pip
+# pip install PyQt6 --no-cache-dir
+#
+# Excel関連エラーの場合:
+# pip install openpyxl xlsxwriter --force-reinstall
+
+# === 互換性情報 ===
+# PyQt6 6.4.0+: Python 3.7-3.11対応
+# openpyxl 3.0.9+: Excel 2010以降対応
+# xlsxwriter 3.0.3+: Excel 2007以降対応
